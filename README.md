@@ -1,4 +1,3 @@
-# AI-Code-Translator
 # AI Code Translator (Streamlit + Vertex AI)
 
 A Streamlit app that:
