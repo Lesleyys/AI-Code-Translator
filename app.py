@@ -5,21 +5,17 @@ import zipfile
 import tempfile
 import urllib.request
 import pandas as pd
-import json
-import re
 import shutil 
 
 import vertexai
 from vertexai.generative_models import GenerativeModel, ChatSession
-from vertexai.preview.language_models import TextGenerationModel
-from vertexai.preview.language_models import CodeChatModel
 
 from google.cloud import storage
 
 PROJECT_ID = "your_project_id" # # Replace by your own project id
 vertexai.init(project=PROJECT_ID, location="your_location") # Replace by your own GCP location
 
-model = GenerativeModel("gemini-1.5-flash-002") # Replace by your own Vertex AI LLM Model
+model = GenerativeModel("gemini-2.5-pro")  # Replace by your own Vertex AI LLM Model
 
 chat_session = model.start_chat()
 
@@ -269,3 +265,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
